@@ -124,7 +124,7 @@ const GitLabIssues = ({ onMinimize }: GitLabIssuesProps) => {
   const highPriorityIssues = issues.filter(issue => issue.priority === "High").length;
 
   return (
-    <Card className="h-full flex flex-col bg-white border border-gray-200 overflow-hidden">
+    <Card className="h-full flex flex-col bg-white border border-gray-200 overflow-hidden text-black font-frutiger font-light">
       <CardHeader className="pb-2 bg-white flex-shrink-0 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">

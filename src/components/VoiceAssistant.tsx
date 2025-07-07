@@ -121,7 +121,7 @@ const VoiceAssistant = () => {
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm font-semibold text-ubs-red flex items-center gap-2">
               <MessageSquare className="h-4 w-4" />
-              PAL (Personal Assistant Lite)
+              PAL 
             </CardTitle>
             <div className="flex gap-1">
               <Button

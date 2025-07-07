@@ -17,38 +17,38 @@ const Header = ({ onClose, onMaximize, isMaximized }: HeaderProps) => {
 
   return (
     <>
-      <header className="bg-ubs-red text-white px-6 py-4 flex items-center justify-between shadow-sm">
+      <header className="bg-white text-[hsl(var(--ubs-dark-grey))] px-6 py-4 flex items-center justify-between shadow-sm font-frutiger font-light" style={{ fontWeight: 300 }}>
         <div className="flex items-center">
           <img src="/UBSLOGO.png" alt="UBS Logo" className="h-8 w-auto mr-3" />
-          <div className="text-xl font-bold font-ubs-headline tracking-wide text-white">
-            
-          </div>
+          <span className="text-xl font-frutiger font-light text-black ml-2" style={{ fontWeight: 300 }}>
+            PAL
+          </span>
         </div>
         
         <div className="flex items-center gap-4">
           <button
             onClick={toggleInfo}
-            className="w-8 h-8 hover:bg-ubs-red-dark rounded-full flex items-center justify-center transition-colors duration-200"
+            className="w-8 h-8 hover:bg-[hsl(var(--ubs-light-grey))] rounded-full flex items-center justify-center transition-colors duration-200"
             title="Information"
           >
-            <Info className="h-5 w-5" />
+            <Info className="h-5 w-5 text-[hsl(var(--ubs-dark-grey))]" />
           </button>
           {onMaximize && (
             <button
               onClick={onMaximize}
-              className="w-8 h-8 hover:bg-ubs-red-dark rounded-full flex items-center justify-center transition-colors duration-200"
+              className="w-8 h-8 hover:bg-[hsl(var(--ubs-light-grey))] rounded-full flex items-center justify-center transition-colors duration-200"
               title={isMaximized ? "Minimize" : "Maximize"}
             >
-              <Maximize className="h-5 w-5" />
+              <Maximize className="h-5 w-5 text-[hsl(var(--ubs-dark-grey))]" />
             </button>
           )}
           {onClose && (
             <button
               onClick={onClose}
-              className="w-8 h-8 hover:bg-ubs-red-dark rounded-full flex items-center justify-center transition-colors duration-200"
+              className="w-8 h-8 hover:bg-[hsl(var(--ubs-light-grey))] rounded-full flex items-center justify-center transition-colors duration-200"
               title="Close PAL"
             >
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5 text-[hsl(var(--ubs-dark-grey))]" />
             </button>
           )}
         </div>

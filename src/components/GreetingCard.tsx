@@ -51,7 +51,7 @@ const GreetingCard = ({ onDismiss, onSetAgenda }: GreetingCardProps) => {
   };
 
   return (
-    <Card className="mb-6 border-ubs-red/20 bg-gradient-to-r from-ubs-red/5 to-transparent">
+    <Card className="mb-6 border-ubs-red/20 bg-gradient-to-r from-ubs-red/5 to-transparent text-black font-frutiger font-light">
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-semibold text-ubs-red flex items-center gap-2">

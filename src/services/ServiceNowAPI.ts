@@ -16,6 +16,31 @@ export interface ServiceNowConfig {
   bearerToken: string | null;
 }
 
+export function calculateSLA(assignedTime: string, priority: string): { slaDue: Date, remaining: string } {
+  const assignedDate = new Date(assignedTime);
+  let slaMs = 0;
+  if (priority.toLowerCase() === 'high' || priority === '1') {
+    slaMs = 2 * 60 * 60 * 1000; // 2 hours
+  } else if (priority.toLowerCase() === 'mid' || priority === '2') {
+    slaMs = 48 * 60 * 60 * 1000; // 48 hours
+  } else {
+    slaMs = 5 * 24 * 60 * 60 * 1000; // 5 days
+  }
+  const slaDue = new Date(assignedDate.getTime() + slaMs);
+  const now = new Date();
+  let diff = slaDue.getTime() - now.getTime();
+  if (diff < 0) diff = 0;
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const days = Math.floor(hours / 24);
+  const hr = hours % 24;
+  let remaining = '';
+  if (days > 0) remaining += `${days}d `;
+  if (hr > 0) remaining += `${hr}h `;
+  remaining += `${minutes}m`;
+  return { slaDue, remaining };
+}
+
 class ServiceNowAPI {
   private config: ServiceNowConfig = {
     baseUrl: null,

@@ -162,7 +162,7 @@ const CommunicationsModule = ({ onMinimize }: CommunicationsModuleProps) => {
   );
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6 h-full flex flex-col">
+    <div className="bg-white rounded-lg border border-gray-200 p-6 h-full flex flex-col text-black font-frutiger font-light">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center">
           <Mail className="h-5 w-5 text-blue-600 mr-2" />

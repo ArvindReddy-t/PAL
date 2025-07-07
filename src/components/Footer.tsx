@@ -26,7 +26,7 @@ const Footer = ({ minimizedModules, activeModules, onRestoreModule, onMinimizeMo
   if (allModules.length === 0) return null;
 
   return (
-    <div className="bg-white border-t border-gray-200 h-full overflow-hidden">
+    <div className="bg-[hsl(var(--ubs-light-grey))] border-t border-[hsl(var(--ubs-medium-grey))] h-full overflow-hidden font-frutiger font-light text-[hsl(var(--ubs-medium-grey))]" style={{ fontWeight: 300 }}>
       <ScrollArea className="h-full">
         <div className="p-3">
           <div className="grid grid-cols-2 gap-2">
@@ -40,16 +40,16 @@ const Footer = ({ minimizedModules, activeModules, onRestoreModule, onMinimizeMo
               
               // Determine button styling based on state
               const buttonClasses = isMinimized 
-                ? "flex items-center gap-2 px-3 py-3 bg-white border border-gray-300 hover:bg-gray-50 text-ubs-black rounded-lg transition-colors text-left font-frutiger font-semibold shadow-sm"
-                : "flex items-center gap-2 px-3 py-3 bg-ubs-red hover:bg-ubs-red-dark text-white rounded-lg transition-colors text-left font-frutiger font-semibold shadow-sm";
+                ? "flex items-center gap-2 px-3 py-3 bg-white border border-gray-300 hover:bg-gray-50 rounded-lg transition-colors text-left font-frutiger font-light shadow-sm text-[hsl(var(--ubs-medium-grey))]"
+                : "flex items-center gap-2 px-3 py-3 bg-ubs-red hover:bg-ubs-red-dark text-white rounded-lg transition-colors text-left font-frutiger font-light shadow-sm";
               
               const iconClasses = isMinimized 
-                ? "h-4 w-4 text-ubs-black flex-shrink-0"
+                ? "h-4 w-4 text-[hsl(var(--ubs-medium-grey))] flex-shrink-0"
                 : "h-4 w-4 text-white flex-shrink-0";
               
               const textClasses = isMinimized 
-                ? "text-xs text-ubs-black truncate font-frutiger font-semibold"
-                : "text-xs text-white truncate font-frutiger font-semibold";
+                ? "text-xs truncate font-frutiger font-light"
+                : "text-xs text-white truncate font-frutiger font-light";
               
               const handleClick = () => {
                 if (isMinimized) {
@@ -67,9 +67,10 @@ const Footer = ({ minimizedModules, activeModules, onRestoreModule, onMinimizeMo
                   onClick={handleClick}
                   className={buttonClasses}
                   title={title}
+                  style={{ fontWeight: 300 }}
                 >
                   <Icon className={iconClasses} />
-                  <span className={textClasses}>{label}</span>
+                  <span className={textClasses} style={{ fontWeight: 300 }}>{label}</span>
                 </button>
               );
             })}

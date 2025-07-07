@@ -35,7 +35,7 @@ const TaskOverview = ({ onMinimize }: TaskOverviewProps) => {
   ];
 
   return (
-    <Card className="h-full flex flex-col bg-white border border-gray-200 overflow-hidden">
+    <Card className="h-full flex flex-col bg-white border border-gray-200 overflow-hidden text-black font-frutiger font-light">
       <CardHeader className="pb-2 bg-white flex-shrink-0 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center gap-2 text-lg font-semibold text-pal-red font-dm-sans">

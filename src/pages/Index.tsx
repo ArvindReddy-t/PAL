@@ -61,8 +61,8 @@ const Index = () => {
     : "fixed bottom-4 right-4 z-50";
 
   const windowStyle = isMaximized
-    ? "bg-white rounded-lg shadow-2xl w-full max-w-5xl h-full max-h-[85vh] overflow-hidden font-dm-sans flex flex-col"
-    : "bg-white rounded-lg shadow-2xl font-dm-sans flex flex-col overflow-hidden";
+    ? "bg-white rounded-lg shadow-2xl w-full max-w-5xl h-full max-h-[85vh] overflow-hidden font-frutiger font-light flex flex-col text-[hsl(var(--ubs-dark-grey))]"
+    : "bg-white rounded-lg shadow-2xl font-frutiger font-light flex flex-col overflow-hidden text-[hsl(var(--ubs-dark-grey))]";
 
   const windowSize = isMaximized ? {} : { width: '486px', height: '624px' };
 
@@ -96,9 +96,9 @@ const Index = () => {
         
         <ResizablePanelGroup direction="vertical" className="flex-1 overflow-hidden">
           <ResizablePanel defaultSize={75} minSize={50} className="overflow-hidden">
-            <main className="h-full overflow-hidden">
+            <main className="h-full overflow-hidden font-frutiger font-light text-[hsl(var(--ubs-dark-grey))]">
               <div className="h-full overflow-y-auto">
-                <div className="p-4 space-y-4">
+                <div className="p-4 space-y-4 font-frutiger font-light text-[hsl(var(--ubs-dark-grey))]">
                   {/* Always show VoiceOverview first */}
                   <VoiceOverview key="voiceoverview" />
                   
