@@ -1,46 +1,65 @@
-# Welcome to PAL project
+# PAL Dashboard (UBS Style)
 
-## Project info
+A modern, modular dashboard for work management, styled to UBS standards. This project integrates ServiceNow, communications, approvals, and more, with a cinematic, animated VoiceOverview module for real-time alerts.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Features
+- **VoiceOverview Module:**  Animated alerts for ServiceNow, communications, approvals, and more.
+- **ServiceNow Integration:** Fetches and displays critical incidents, SLA status, and change tasks.
+- **Modular UI:** Includes modules for communications, approvals, tasks, meetings, GitLab issues, and more.
+- **UBS Branding:** Uses Frutiger 45 Light font, UBS color palette, and clean, modern design.
+- **Responsive Design:** Works on desktop and mobile.
 
-Follow these steps:
+## Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd pal-red-dashboard-21-main
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Set up environment variables:**
+   - If you use API keys or tokens, create a `.env` file and add your credentials as needed.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Running the Project
+
+Start the development server:
+```bash
 npm run dev
+# or
+yarn dev
 ```
 
-**Edit a file directly in GitHub**
+Open your browser and go to [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Folder Structure
 
-**Use GitHub Codespaces**
+```
+pal-red-dashboard-21-main/
+├── src/
+│   ├── components/         # React components (modules, UI, VoiceOverview, etc.)
+│   ├── pages/              # Main pages (Index, NotFound)
+│   ├── services/           # API service files (ServiceNowAPI, etc.)
+│   ├── utils/              # Utility functions
+│   ├── hooks/              # Custom React hooks
+│   ├── types/              # TypeScript types
+│   └── ...
+├── public/                 # Static assets (logo, favicon, etc.)
+├── package.json            # Project metadata and scripts
+├── README.md               # Project documentation
+└── ...
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Customization
+- **ServiceNow API:** Update your API endpoint and bearer token in the relevant service file.
+- **Branding:** Adjust colors and fonts in `index.css` and `tailwind.config.ts` as needed.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contact
+For questions or support, contact the project maintainer.
 
